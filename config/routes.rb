@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   scope '/admin' do 
+    get "/", to: "posts#index"
     resources :posts
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -10,4 +11,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "blog#index"
+
 end
